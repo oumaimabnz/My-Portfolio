@@ -4,7 +4,7 @@ import { useTheme } from '../context/ThemeContext'
 import { useState } from 'react'
 
 const Navbar = () => {
-    const {isDarkMode, toggleDarkmode} = useTheme()
+    const {isDarkMode, toggleDarkMode} = useTheme()
     const [ isMenuOpen, setIsMenuOpen ] = useState(false)
     
     const scrollToSection = (sectionId) => {
@@ -48,11 +48,11 @@ const Navbar = () => {
                 <motion.button
                    whileHover={{scale: 1.05}}
                    whileTap={{ scale: 0.95}}
-                   onClick={() => toggleDarkmode(isDarkMode ? "light" : "dark")}
+                   onClick={() => toggleDarkMode(isDarkMode ? "light" : "dark")}
                    className={`p-2 rounded-full transition-colors ${
                      isDarkMode
                       ? "text-gray-400 hover:text-white hover:bg-gray-800"
-                      : "test-gray-600 hover:text-gray-900 hover:bg-gray-200"
+                      : "text-gray-600 hover:text-gray-900 hover:bg-gray-200"
                      }`}
                 >
                     {isDarkMode ? <Sun size={18} /> : <Moon size={18} />}
@@ -63,7 +63,7 @@ const Navbar = () => {
                 <motion.button
                   whileHover={{ scale: 1.05}}
                   whileTap={{ scale: 0.95}}
-                  onClick={() => toggleDarkmode(isDarkMode ? "light": "dark")}
+                  onClick={() => toggleDarkMode(isDarkMode ? "light": "dark")}
                   className={`p-2 rounded-full transition-colors ${
                         isDarkMode
                         ? "text-gray-400 hover:text-white hover:bg-gray-800"
