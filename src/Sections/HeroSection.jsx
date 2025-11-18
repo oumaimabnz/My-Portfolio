@@ -35,7 +35,7 @@ const HeroSection = () => {
     }
 
     const imageVariants = {
-        hidden: {x: 50, opacity:0},
+        hidden: {x: 0, opacity:0},
         visible: {
             y: 0,
             opacity: 1,
@@ -210,26 +210,7 @@ const HeroSection = () => {
                   ))}
                 </motion.div>
                 
-                <motion.div
-                  variants={itemVariants}
-                  className="flex justify-center items-center space-x-6 text-xs uppercase tracking-widest flex-wrap "
-                >
-                    <span className={isDarkMode ? "text-gray-600" : "text-gray-500"}>
-                      React
-                    </span>
-                    <span className={isDarkMode ? "text-gray-700" : "text-gray-400"}>
-                        •
-                    </span>
-                    <span className={isDarkMode ? "text-gray-600" : "text-gray-500"}>
-                        Nextjs
-                    </span>
-                    <span className={isDarkMode ? "text-gray-600" : "text-gray-400"}>
-                        •
-                    </span>
-                    <span className={isDarkMode ? "text-gray-600" : "text-gray-500"}>
-                        TailwindCSS
-                    </span>
-                </motion.div>
+                
             </motion.div>
           </div>
 
@@ -327,30 +308,10 @@ const HeroSection = () => {
               initial="hidden"
               animate="visible"
               variants={imageVariants}
-              className="flex justify-center lg:justify-end"
+              className="flex justify-center"
              >
                 <div className="relative">
-                   <motion.div
-                     variants={itemVariants}
-                     className="flex items-center space-x-8 text-xs uppercase tracking-widest absolute -top-16 -left-28"
-                   >
-                     <span className={isDarkMode ? "text-gray-600" : "text-gray-500"}>
-                      React
-                    </span>
-                    <span className={isDarkMode ? "text-gray-700" : "text-gray-400"}>
-                        •
-                    </span>
-                    <span className={isDarkMode ? "text-gray-600" : "text-gray-500"}>
-                        Nextjs
-                    </span>
-                    <span className={isDarkMode ? "text-gray-600" : "text-gray-400"}>
-                        •
-                    </span>
-                    <span className={isDarkMode ? "text-gray-600" : "text-gray-500"}>
-                        TailwindCSS
-                    </span>
-                   </motion.div>
-
+                   
                    <motion.div
                      whileHover={{ scale: 1.02}}
                      className={`w-80 h-96 rounded-3xl overflow-hidden border-4 ${

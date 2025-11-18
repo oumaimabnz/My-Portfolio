@@ -2,16 +2,17 @@ import React from 'react'
 import { ThemeProvider } from './context/ThemeContext'
 import Navbar from './components/Navbar'
 import HeroSection from './Sections/HeroSection'
+import SkillsSection from './Sections/SkillsSection'
 
 
 const App = () => {
 
   return (
     <ThemeProvider>
-      <div>
+      <div className='pb-[100vh]'>
         <Navbar/>
         <HeroSection/>
-        
+        <SkillsSection/>
       </div>
     </ThemeProvider>
     
