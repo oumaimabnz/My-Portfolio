@@ -1,11 +1,11 @@
 import { delay, motion, useScroll, useTransform } from "framer-motion"
 import { ArrowDown, Mail } from "lucide-react"
 import { FiGithub, FiLinkedin } from "react-icons/fi"
-import { useTheme } from "../context/ThemeContext"
+import { useTheme } from "../../context/ThemeContext"
 import { GiHidden } from "react-icons/gi"
 import { optgroup } from "framer-motion/client"
-import profile from '../assets/profile.png'
-import { containerVariants, itemVariants } from "../utils/helper"
+import profile from '../../assets/profile.png'
+import { containerVariants, itemVariants } from "../../utils/helper"
 
 
 

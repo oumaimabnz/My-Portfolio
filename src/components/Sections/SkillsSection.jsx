@@ -1,8 +1,8 @@
 import { useRef } from "react"
 import { motion, useInView, useScroll, useTransform } from "framer-motion"
-import { useTheme } from "../context/ThemeContext"
-import { containerVariants, itemVariants } from "../utils/helper"
-import { SKILLS_CATEGORY, STATS, TECH_STACK } from "../utils/data"
+import { useTheme } from "../../context/ThemeContext"
+import { containerVariants, itemVariants } from "../../utils/helper"
+import { SKILLS_CATEGORY, STATS, TECH_STACK } from "../../utils/data"
 
 
 const SkillsSection = () => {
@@ -216,6 +216,8 @@ const SkillsSection = () => {
                     </motion.div>
                 ))}
             </motion.div>
+
+        
         </div>
   </section> 
     
