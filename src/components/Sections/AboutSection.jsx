@@ -145,7 +145,7 @@ const AboutSection = () => {
                                   } transition-all duration-300`}
                                 >
                                     <div
-                                      className={`p-7 rounded-lg ${
+                                      className={`p-5 rounded-lg ${
                                         isDarkMode ? "bg-gray-700" : "bg-white"
                                       }`}
                                     >
