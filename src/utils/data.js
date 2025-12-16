@@ -41,7 +41,7 @@ export const PROJECTS = [
      description: "A beautiful to-do app",
      image: project,
      tags: ["React", "Tailwind", "Framer motion"],
-     liveUrl:"#",
+     liveUrl:"https://todo-app-drab-alpha-42.vercel.app/",
      githubUrl:"#",
      featured: true,
      category: "Frontend",
