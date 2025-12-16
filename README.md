@@ -6,7 +6,7 @@ Welcome to my personal portfolio website! This project is built with **React** a
 
 ## 🚀 Live Demo
 
-👉
+👉 https://odev-portfolio.vercel.app/
 
 ## 🧰 Tech Stack
 
