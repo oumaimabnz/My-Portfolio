@@ -90,7 +90,7 @@ The project is optimized for modern frontend deployment workflows.
 
 👤 Oumaima Benaziza
 
-🔗 LinkedIn: www.linkedin.com/in/oumaima-ben
+🔗 LinkedIn: www.linkedin.com/in/oumaima-benaziza
 
 📧 Email: oumaimabenaziza21@gmail.com
 
