@@ -39,14 +39,46 @@ const ContactSection = () => {
     e.preventDefault()
     setIsSubmitting(true)
 
-    await new Promise ((resolve) => setTimeout(resolve, 1000))
+    if (!import.meta.env.VITE_WEB3FORMS_KEY) {
+       console.error("Web3Forms key is missing");
+       setIsSubmitting(false);
+       return;
+    }
 
-    setIsSubmitting(false)
-    setShowSuccess(true)
-    setFormData({ name:"", email:"", message:""})
+    const formDataToSend = new FormData(e.target);
+    formDataToSend.append(
+      "access_key",
+      import.meta.env.VITE_WEB3FORMS_KEY
+       
+    );
+    
+    formDataToSend.append("subject", "New Contact Message from Portfolio");
+    formDataToSend.append("from_name", "Portfolio Contact Form");
 
-    setTimeout(() => setShowSuccess(false), 3000)
-  }
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formDataToSend,
+      });
+
+      const data = await response.json();
+
+     if (data.success) {
+       setShowSuccess(true);
+       setFormData({ name: "", email: "", message: "" });
+       e.target.reset();
+       setTimeout(() => setShowSuccess(false), 3000);
+     } else {
+      console.error(data)
+       alert("Submission failed. Please try again.");
+     }
+     } catch (error) {
+       alert("Network error. Please try again later.");
+     } finally {
+       setIsSubmitting(false);
+     }
+  };
+
   return <section
         id="contact"
         ref={sectionRef}
@@ -122,12 +154,14 @@ const ContactSection = () => {
             >
               <h3 className="text-2xl font-medium mb-8">Send me a message </h3>
 
-              <div className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <TextInput
                     isDarkMode={isDarkMode}
                     label="Your Name"
+                    name="name"
                     value={formData.name}
+                    required
                     handleInputChange={(text) =>
                       handleInputChange("name", text)
                     }
@@ -136,7 +170,10 @@ const ContactSection = () => {
                   <TextInput
                     isDarkMode={isDarkMode}
                     label="Email Address"
+                    name="email"
+                    type="email"
                     value={formData.email}
+                    required
                     handleInputChange={(text) =>
                       handleInputChange("email", text)
                     }
@@ -146,7 +183,11 @@ const ContactSection = () => {
                   <TextInput
                     isDarkMode={isDarkMode}
                     label="Your Message"
-                    value={formData.massage}
+                    name="message"
+                    textarea
+                    rows={6}
+                    value={formData.message}
+                    required
                     handleInputChange={(text) =>
                       handleInputChange("message", text)
                     }
@@ -157,8 +198,7 @@ const ContactSection = () => {
                     whileHover={{ y:-2, scale: 1.02}}
                     whileTap={{ scale: 0.98}}
                     className="w-full bg-blue-500 hover:bg-blue-600 disabled:bg-blue-400 text-white py-4 rounded-xl text-sm uppercase tracking-wider font-medium transition-all duration-300 flex items-center justify-center space-x-2"
-
-                    onClick={handleSubmit}
+                    type="submit"
                   >
                     {isSubmitting ? (
                       <>
@@ -180,7 +220,7 @@ const ContactSection = () => {
                       </>
                     )}
                   </motion.button>
-                </div> 
+                </form> 
             </motion.div>
           </motion.div>
 

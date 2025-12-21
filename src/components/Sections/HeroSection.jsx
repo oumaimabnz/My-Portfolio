@@ -127,7 +127,7 @@ const HeroSection = () => {
                     isDarkMode ? "text-gray-500" : "text-gray-600"
                    } mb-4`}
                 > 
-                 Frontend Developer
+                 Frontend-Focused Full-Stack (MERN) Developer
                 </motion.div>
 
                 <motion.h1
@@ -227,7 +227,7 @@ const HeroSection = () => {
                     isDarkMode ? "text-gray-500" : "text-gray-600"
                  } mb-6`}
                >
-                Frontend Developer
+                Frontend-Focused Full-Stack (MERN) Developer
                </motion.div>
                <motion.h1
                  variants={itemVariants}
@@ -284,9 +284,9 @@ const HeroSection = () => {
                   className="flex space-x-6 mb-12"
                 >
                   {[
-                    {icon: FiGithub, href:"#"},
-                    {icon: FiLinkedin, href:"#"},
-                    {icon: Mail, href:"#"},
+                    {icon: FiGithub, href:"https://github.com/oumaimabnz"},
+                    {icon: FiLinkedin, href:"https://www.linkedin.com/in/oumaima-benaziza"},
+                    {icon: Mail, href:"mailto:oumaimabenaziza21@gmail.com"},
                   ].map ((social, index) => (
                     <motion.a
                        key={index}

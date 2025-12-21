@@ -89,14 +89,14 @@ const SkillsSection = () => {
               initial="hidden"
               animate={isInView ? "visible" : "hidden"}
               variants={containerVariants}
-              className="w-full flex justify-center"
+              className="grid md:grid-cols-2 gap-8 lg:gap-12"
 
             >
                 {SKILLS_CATEGORY.map((category, categoryIndex) => (
                     <motion.div
                       key={category.title}
                       variants={itemVariants}
-                      className={`p-8 rounded-2xl border w-full max-w-5xl ${
+                      className={`p-8 rounded-2xl border ${
                         isDarkMode
                           ? "bg-gray-900/50 border-gray-800 backdrop-blur-sm"
                           : "bg-white/80 border-gray-200 backdrop-blur-sm"

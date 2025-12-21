@@ -16,21 +16,21 @@ const Footer = () => {
         {
           name: "Github",
           icon: FiGithub,
-          url:"#",
+          url:"https://github.com/oumaimabnz",
           color:"hover:text-gray-400",
           
         },
         {
           name: "LinkedIn",
           icon: FiLinkedin,
-          url:"#",
+          url:"https://www.linkedin.com/in/oumaima-benaziza",
           color:"hover:text-blue-400",
           
         },
        {
           name: "Email",
           icon: Mail,
-          url:"#",
+          url:"mailto:oumaimabenaziza21@gmail.com",
           color:"hover:text-green-400",
         },
     ];

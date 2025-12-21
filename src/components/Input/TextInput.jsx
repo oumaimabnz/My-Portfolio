@@ -1,9 +1,23 @@
-const TextInput = ({ isDarkMode, value, handleInputChange, textarea, label}) => {
+const TextInput = ({ 
+   isDarkMode, 
+   value, 
+   handleInputChange,
+   textarea, 
+   label,
+   name,
+   type = "text",
+   required = false,
+   rows = 4,
+  }) => {
     const InputComponent = textarea ? "textarea" : "input"
+
   return (
     <div className="relative">
         <InputComponent
-           type="text"
+           name={name}
+           type={!textarea ? type : undefined}
+           rows={!textarea ? rows : undefined}
+           required={required}
            className={`w-full px-4 pt-6 pb-2 border rounded-xl transition-all duration-300 outline-none resize-none ${
             isDarkMode 
               ? "bg-gray-800/50 border-gray-700 text-white focus:border-blue-500 focus:bg-gray-800/70"
