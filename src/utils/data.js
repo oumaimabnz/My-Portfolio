@@ -5,6 +5,7 @@ import todoapp from '../assets/todo-app.png'
 import movieexplorer from '../assets/movie-explorer.png'
 import mernAuth from '../assets/mern-auth.png'
 import mernShortUrl from '../assets/mern-shorturl.png'
+import portfolio from '../assets/portfolio.png'
 import { head, image, title } from "framer-motion/client";
 
 export const SKILLS_CATEGORY = [
@@ -76,7 +77,7 @@ export const PROJECTS = [
     {id: 3,
      title: "Portfolio",
      description: "Early portfolio project showcasing basic React components and responsive layout",
-     image: movieexplorer,
+     image: portfolio,
      tags: ["React", "Javascript", "HTMS5","CSS3", "Vite", "Responsive UI"],
      liveUrl:"https://portfolio-nu-three-67.vercel.app/",
      githubUrl:"https://github.com/oumaimabnz/Portfolio",
