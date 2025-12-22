@@ -6,6 +6,7 @@ import movieexplorer from '../assets/movie-explorer.png'
 import mernAuth from '../assets/mern-auth.png'
 import mernShortUrl from '../assets/mern-shorturl.png'
 import portfolio from '../assets/portfolio.png'
+import dashboard from '../assets/dashboard.png'
 import { head, image, title } from "framer-motion/client";
 
 export const SKILLS_CATEGORY = [
@@ -85,6 +86,16 @@ export const PROJECTS = [
      category: "Frontend",
     },
     {id: 4,
+     title: "Admin-dashboard",
+     description: "Responsive admin dashboard built with React, Tailwind CSS, and Syncfusion components.",
+     image: dashboard,
+     tags: ["React", "Vite", "Syncfusion", "TailwindCSS-v4"],
+     liveUrl:"https://admin-dashboard-virid-chi-11.vercel.app/",
+     githubUrl:"https://github.com/oumaimabnz/Admin-dashboard",
+     featured: false,
+     category: "frontend",
+    },
+    {id: 5,
      title: "MERN-URL-shortener",
      description: "MERN URL shortener app with QR code generation, download, and MongoDB persistence",
      image: mernShortUrl,
@@ -94,7 +105,7 @@ export const PROJECTS = [
      featured: false,
      category: "MERN",
     },
-    {id: 5,
+    {id: 6,
      title: "MERN-authentication",
      description: "Full-stack MERN authentication system with JWT-based login and protected routes",
      image: mernAuth,
